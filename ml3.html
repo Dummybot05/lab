@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>lab</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width">
+<style>
+body {
+    margin:0;
+    padding:0;
+    background-color:#333
+}
+.container {
+    width:90%;
+    margin-left:5%;
+    margin-top:50px;
+    background-color:#555;
+    color:white;
+    padding:10px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h2>
+<pre>
+<code>
+3.IMPLEMENT K-NEAREST NEIGHBORS CLASSIFICATION USING PYTHON
+
+AIM: To Implement k-neighbours classification using python
+
+DESCRIPTION:
+This algorithm is used to solve the classification model problems. K-nearest neighbor or K-NN
+algorithm basically creates an imaginary boundary to classify the data. When new data points come in,
+the algorithm will try to predict that to the nearest of the boundary line.
+Therefore, larger k value means smother curves of separation resulting in less complex models.
+Whereas, smaller k value tends to over fit the data and resulting in complex models.
+It’s very important to have the right k-value when analyzing the dataset to avoid over fitting and under
+fitting of the dataset.
+KNN MODEL REPRESENTATION:
+The model representation for KNN is the entire training dataset.It is as simple as that.
+KNN has no model other than storing the entire dataset, so there is no learning required.
+Efficient implementations can store the data using complex data structures like k-d trees to make look-up
+and matching of new patterns during prediction efficient.
+Because the entire training dataset is stored, you may want to think carefully about the consistency of your
+training data. It might be a good idea to curate it, update it often as new data becomes available and
+remove erroneous and outlier data.
+ The k-nearest neighbor algorithm is imported from the scikit-learnpackage.
+ Create feature and target variables.
+ Split data into training and testdata.
+ Generate a k-NN model using neighborsvalue.
+ Train or fit the data into themodel.
+ Predict thefuture.      
+
+SOURCE CODE:
+
+from sklearn.neighbors import KNeighborsClassifier 
+from sklearn.model_selection import train_test_split 
+from sklearn.datasets import load_iris
+irisData = load_iris()
+X = irisData.data
+y = irisData.target
+print(irisData.feature_names)
+print(irisData.target_names)
+print("\nFirst 10 rows of X:\n", X[:10])
+X_train, X_test, y_train, y_test = train_test_split( X, y, test_size = 0.2, random_state=42)
+knn = KNeighborsClassifier(n_neighbors=2)
+knn.fit(X_train, y_train)
+knn.predict([[3.2, 5.4, 4.1, 2.5]])
+
+Output: array 1   
+</code>
+</pre>
+</h2>
+</div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>lab</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width">
+<style>
+body {
+    margin:0;
+    padding:0;
+    background-color:#333
+}
+.container {
+    width:90%;
+    margin-left:5%;
+    margin-top:50px;
+    background-color:#555;
+    color:white;
+    padding:10px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h2>
+<pre>
+<code>
+2.EXTRACT THE DATA FROM DATABASE USING PYTHON
+
+You’ll learn the following MySQL SELECT operations from Python using a ‘MySQL
+Connector Python’ module.
+ Execute the SELECT query and process the result set returned by the queryin Python.
+ Use Python variables in a where clause of a SELECT query to pass dynamic
+values.
+ Use fetchall(), fetchmany(), and fetchone() methods of a cursor class to fetch all or
+limited rows from atable.
+ Python Select from MySQL Table
+This article demonstrates how to select rows of a MySQL table in Python.
+You’ll learn the following MySQL SELECT operations from Python using a ‘MySQL Connector
+Python’ module
+.
+ Execute the SELECT query and process the result set returned by the queryin Python.
+ Use Python variables in a where clause of a SELECT query to pass dynamic values.
+ Use fetchall(),fetchmany(), and fetchone() methods of a cursor class to fetch all or limited rows
+from atable.
+ Stepsto fetch rows from a MySQL database table Follow these steps:–
+
+SOURCE CODE:
+
+OUTPUT:
+import mysql.connector
+mydb=mysql.connector.connect(host="localhost",user="root",password="password")
+print(mydb)
+import mysql.connector
+mydb=mysql.connector.connect(host="localhost",user="root",password="password")
+cur=mydb.cursor()
+cur.execute("CREATE DATABASE COLLEGE")
+import mysql.connector
+mydb=mysql.connector.connect(host="localhost",user="root",password="password",database="college")
+cur=mydb.cursor()
+s="CREATE TABLE student(rollno integer(4), name varchar(20))"
+cur.execute(s)
+import mysql.connector
+mydb=mysql.connector.connect(host="localhost",user="root",password="password",database="college")
+cur=mydb.cursor()
+s="INSERT INTO student(rollno,name) VALUES(%s,%s)"
+a1=[(1,"Suresh"),(2,"Ramesh")]
+cur.executemany(s,a1)
+mydb.commit()
+print("Done")
+import mysql.connector
+mydb=mysql.connector.connect(host="localhost",user="root",password="password",database="college")
+cur=mydb.cursor()
+s="SELECT * from student"
+cur.execute(s)
+result=cur.fetchall()
+for rec in result:
+ print(rec)
+ 
+Output: (1, ‘Suresh’)(2, ‘Ramesh’)                
+</code>
+</pre>
+</h2>
+</div>
+</body>
+</html>

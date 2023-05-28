@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>lab</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width">
+<style>
+body {
+    margin:0;
+    padding:0;
+    background-color:#333
+}
+.container {
+    width:90%;
+    margin-left:5%;
+    margin-top:50px;
+    background-color:#555;
+    color:white;
+    padding:10px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h2>
+<pre>
+<code>
+16. WRITE A TCL SCRIPT TO ADDING COMPLEXITY USING CONDITIONS.
+
+AIM:
+	Write a program to adding complexity using conditions.
+
+PROGRAM:
+puts "Hey dude, how old might you be?"
+gets stdin Age
+if {$Age < 12} {
+    	puts "You are a child"
+} elseif {$Age < 19} {
+   	 puts "You are a teen"
+} else { 
+    	puts "You are an adult now" 
+}
+INPUT & OUTPUT:
+14
+You are a teen
+8
+You are a child
+55
+You are an adult now
+
+RESULT:
+	Thus the program to adding complexity using conditions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+17. A) WRITE A PERL SCRIPT TO FIND THE LARGEST NUMBER AMONG THREE NUMBERS.
+
+AIM:
+	To write a program to find the largest number among three numbers.
+PROGRAM:
+#!/usr/bin/perl
+print "enter a value";
+$x=&lt;stdin>;
+print "enter b value";
+$y=&lt;stdin>;
+print "enter c value";
+$z=&lt;stdin>;
+if($a > $b) //if compares string use gt ,lt,le,ge
+{
+if($a> $c)
+{
+print " $a is largest number\n";
+}
+else
+{
+print " $c is largest number\n";
+}
+}
+elsif($b >$c)
+{
+print " $b is largest number";
+}
+else
+{
+print " $c is largest number";
+}
+INPUT & OUTPUT:
+Perl great.pl
+
+Enter a value 4
+Enter b value 6
+Enter c value 5
+6 is largest number
+
+RESULT:
+	Thus the program to find the largest number among three numbers.
+
+B) WRITE A PERL SCRIPT TO PRINT THE MULTIPLICATION TABLES FROM 1-10 USING SUBROUTINES.
+
+AIM:
+	To write a program to print the multiplication tables from 1-10 using subroutines.
+PROGRAM:
+for($i=1;$i<=10;$i++)
+{
+  	  $a[$i]=$i;
+   
+}
+
+for($i=1;$i<=10;$i++)
+{
+    	for($j=1;$j<=10;$j++)
+    	{
+        	print(($a[$j]*$a[$i]),"    ");
+   	 }
+   	 print "\n\n";
+}
+
+INPUT & OUTPUT:
+1   2   3   4   5   6   7   8   9  10  11  12
+  	 2   4   6   8 10 12  14  16  18  20  22  24
+   	3   6   9 12 15 18  21  24  27  30  33  36
+   	4   8  12  16  20  24  28  32  36  40  44  48
+  	 5  10  15  20  25  30  35  40  45  50  55  60
+   	6  12  18  24  30  36  42  48  54  60  66  72
+   	7  14  21  28  35  42  49  56  63  70  77  84
+   	8  16  24  32  40  48  56  64  72  80  88  96
+   	9  18  27  36  45  54  63  72  81  90  99 108
+  	10  20  30  40  50  60  70  80  90 100 110 120
+
+RESULT:
+	Thus the program to print the multiplication tables from 1-10 using subroutines
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+18. WRITE A PERL PROGRAM TO IMPLEMENT THE FOLLOWING LIST OF MANIPULATING FUNCTIONS A) SHIFT B) UNSHIFT C) PUSH 
+
+AIM:
+	To write a program to implement the following list of manipulating functions a)Shift b)Unshift c)Push.
+
+PROGRAM:
+SHIFT
+#!/usr/bin/perl
+
+ 	# Initializing the array
+@x = ('Java', 'C', 'C++');
+
+ # Print the Initial array
+print "Original array: @x \n";
+
+ 	# Prints the value returned
+# by shift function
+print "Value returned by shift: ",
+                        shift(@x);
+
+ 	# Array after shift operation
+print "\nUpdated array: @x";
+
+INPUT & OUTPUT:
+Original array: Java C C++ 
+Value returned by shift :Java
+Updated array: C C++
+
+UNSHIFT
+#!/usr/bin/perl
+
+ 	# Initializing the array
+@x = ('Java', 'C', 'C++');
+
+ 	# Print the Initial array
+print "Original array: @x \n";
+
+ 	# Prints the number of elements
+# returned by unshift
+print "No of elements returned by unshift: ",
+                   unshift(@x, 'PHP', 'JSP');
+
+ 	# Array after unshift operation
+print "\nUpdated array: @x";
+
+INPUT & OUTPUT:
+Original array: Java C C++ 
+No of elements returned by unshift :5
+Updated array: PHP JSP Java C C++
+
+PUSH
+#!/usr/bin/perl
+ 
+# Initializing the array
+@x = ('Java', 'C', 'C++');
+ 
+# Print the Initial array
+print "Original array: @x \n";
+ 
+# Pushing multiple values in the array
+push(@x, 'Python', 'Perl');
+ 
+# Printing the array
+print "Updated array: @x";
+
+INPUT & OUTPUT:
+Original array: Java C C++ 
+Updated array: Java C C++ Python Perl
+
+
+RESULT:
+	Thus the program to implement the following list of manipulating functions a)Shift b)Unshift c)Push.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+19. A) WRITE A PERL SCRIPT TO SUBSTITUTE A WORD, WITH ANOTHER WORD IN A STRING.
+
+AIM:
+To write a program to substitute a word, with another word in a string.
+
+PROGRAM:
+#!/usr/bin/perl -w
+  
+# String in which text 
+# is to be replaced
+$string = "Hello all!!! Welcome here";
+  
+# Use of s operator to replace
+# text with pattern
+$string =~ s/here/to Geeks/;
+  
+# Printing the updated string
+print "$string\n";
+
+INPUT & OUTPUT:
+Hello all!!! Welcome to Geeks
+
+RESULT:
+	Thus the program to substitute a word, with another word in a string.
+
+B) WRITE A PERL SCRIPT TO VALIDATE IP ADDRESS AND EMAIL ADDRESS.
+
+AIM:
+	To write a program to validate IP address and email address.
+
+PROGRAM:
+
+email_address.pl
+ use strict;
+use warnings;
+use 5.010;
+ use Email::Address;
+ my $line = 'foo@bar.com  Foo Bar &lt;foobar@example.com> Text bar@foo.com ' ;
+ my @addresses = Email::Address->parse($line); 
+foreach my $addr (@addresses) {
+    	say $addr;
+}
+
+INPUT & OUTPUT:
+foo@bar.com
+"Foo Bar" &lt;foobar@example.com>
+bar@foo.com
+
+email_valid.pl
+use strict;
+use warnings;
+use 5.010;
+use Email::Valid;
+ 	foreach my $email ('foo@bar.com', ' foo@bar.com ', 'foo at bar.com') 
+{
+    	my $address = Email::Valid->address($email);
+    	 ($address ? "yes '$address'" : "no '$email'");
+}
+INPUT & OUTPUT:
+yes 'foo@bar.com'
+yes 'foo@bar.com'
+no 'foo at bar.com'
+	
+RESULT:
+	Thus the program to validate IP addresses and email address.
+
+
+
+
+
+
+
+
+
+
+
+
+
+20. WRITE A PERL SCRIPT TO PRINT THE FILE IN REVERSE ORDER USING COMMAND LINE ARGUMENTS.
+
+AIM:
+	To write a program to print the file in reverse order using command line arguments.
+
+PROGRAM:
+	#!/bin/bash
+	text=$(cat $1)
+	arr=($text)
+	al=${#arr[@]}
+	let al="al-1"
+
+	while (($al >= 0))
+	do
+   	 echo -n "${arr[al]}"
+   	 echo -n " "
+    	let al="al - 1"
+	done
+	echo
+INPUT & OUTPUT:
+	 Input is 
+	a
+	b
+	c
+	d
+	Output is 
+	 d
+	c
+	b
+	a	
+RESULT:
+	Thus the program to print the file in reverse order using command line arguments
+</code>
+</pre>
+</h2>
+</div>
+</body>
+</html>

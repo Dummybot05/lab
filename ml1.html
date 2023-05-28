@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>lab</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width">
+<style>
+body {
+    margin:0;
+    padding:0;
+    background-color:#333
+}
+.container {
+    width:90%;
+    margin-left:5%;
+    margin-top:50px;
+    background-color:#555;
+    color:white;
+    padding:10px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h2>
+<pre>
+<code>
+1.The probability that it is Friday and that a student is absent is 3%. Since there are 5
+school days in a week, the probability that it is Friday is 20%.What is the probability that
+a student is absent given that today is Friday? Apply Baye’s rule in python to get the 
+result. (Ans: 15%)
+
+AIM: To find the probability that a student is absent given that today is Friday.
+
+DESCRIPTION:
+Machine learning is a method of data analysis that automates analytical model building of data set.
+Using the implemented algorithms that iteratively learn from data, machine learning allows computers
+to find hidden insights without being explicitly programmed where to look. Naive bayes algorithm is
+one of the most popular machines learning technique. In this article we will look how to implement
+Naive bayes algorithm using python.
+Before someone can understand Bayes’ theorem, they need to know a couple of related concepts first,
+namely, the idea of Conditional Probability, and Bayes’ Rule.
+Conditional Probability is just what is the probability that something will happen, given that something
+else has already happened.
+Let say we have a collection of people. Some of them are singers. They are either male or female. If we
+select a random sample, what is the probability that this person is a male? what is the probability that
+this person is a male and singer? Conditional Probability is the best option here. We can calculate
+probability like,
+P(Singer & Male) = P(Male) x P(Singer / Male)
+
+What is Bayes rule ?
+
+We can simply define Bayes rule like this. Let A1, A2, …, An be a set of mutually exclusive events that
+together form the sample space S. Let B be any event from the same sample space, such that P(B) > 0.
+Then, P( Ak | B ) = P( Ak ∩ B ) / P( A1 ∩ B ) + P( A2 ∩ B ) + . . . + P( An ∩ B )      
+
+What is Bayes classifier?
+
+Naive Bayes classifiers are a family of simple probabilistic classifiers based on applying Bayes’
+theorem with strong (naive) independence assumptions between the features in machine learning.
+Basically we can use above theories and equations for classification problem.
+
+SOURCE CODE:
+
+probAbsentFriday=0.0
+3 probFriday=0.2
+# bayes Formula
+#p(Absent|Friday)=p(Friday|Absent)p(Absent)/p(Friday)
+#p(Friday|Absent)=p(Friday∩Absent)/p(Absent)
+# Therefore the result is:
+bayesResult=(probAbsentFriday/probFriday)
+print(bayesResult * 100)
+
+Output: 15                                            
+</code>
+</pre>
+</h2>
+</div>
+</body>
+</html>

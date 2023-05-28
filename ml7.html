@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>lab</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width">
+<style>
+body {
+    margin:0;
+    padding:0;
+    background-color:#333
+}
+.container {
+    width:90%;
+    margin-left:5%;
+    margin-top:50px;
+    background-color:#555;
+    color:white;
+    padding:10px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h2>
+<pre>
+<code>
+7.IMPLEMENT NAÏVE BAYES THEOREM TO CLASSIFY THE ENGLISHTEXT
+
+AIM:
+To Implement naïve baye’s theoremto classify the English text
+
+DESCRIPTION:
+The challenge of text classification is to attach labels to bodies of text, e.g., tax document, medical form,
+etc. based on the text itself. For example, think of your spam folder in your email. How does your email
+provider know that a particular message is spam or “ham” (not spam)? We’ll take a look at one natural
+language processing technique for text classification called Naive Bayes
+
+SOURCE CODE:
+import pandas as pd
+fromsklearn.model_selection import train_test_split fromsklearn.feature_extraction.text import 
+CountVectorizerfrom sklearn.naive_bayes import MultinomialNB
+fromsklearn.metrics import accuracy_score, confusion_matrix, precision_score, recall_score
+msg = pd.read_csv('document.csv', names=['message', 'label'])print("Total Instances of Dataset: ", 
+msg.shape[0]) msg['labelnum'] = msg.label.map({'pos': 1, 'neg': 0})
+X = msg.messagey = msg.labelnum
+Xtrain, Xtest, ytrain, ytest =train_test_split(X, y)count_v = CountVectorizer()
+Xtrain_dm = count_v.fit_transform(Xtrain)Xtest_dm = count_v.transform(Xtest)
+df = pd.DataFrame(Xtrain_dm.toarray(),columns=count_v.get_feature_names())
+clf = MultinomialNB() clf.fit(Xtrain_dm, ytrain) pred = clf.predict(Xtest_dm)
+print('Accuracy Metrics:')
+print('Accuracy: ', accuracy_score(ytest, pred)) print('Recall: ', recall_score(ytest, pred)) print('Precision: ',
+precision_score(ytest, pred))
+print('Confusion Matrix: \n', confusion_matrix(ytest, pred))
+
+
+document.csv:
+I love this sandwich,pos
+Thisis an amazingplace,pos
+I feel very good about these beers,pos
+This is my best work,pos
+What an awesome view,pos
+I do not like this restaurant,neg
+I amtired of this stuff,neg
+I can't deal with this,neg 
+Heis my sworn enemy,neg
+My boss is horrible,neg
+This is an awesome place,pos
+I do not like the taste of this juice,neg
+I love to dance,pos
+I am sick and tired of this place,neg
+What a great holiday,pos
+That is a bad locality to stay,neg
+We will have good fun tomorrow,pos
+Iwent to my enemy's house today,neg
+
+
+OUTPUT:
+Total Instances of Dataset: 18Accuracy Metrics:
+Accuracy: 0.6
+Recall: 0.6666666666666666
+Precision: 0.6666666666666666
+Confusion Matrix:
+[[1 1]
+[1 2]]
+----------
+Enter any statement to predict: What a great holiday
+</code>
+</pre>
+</h2>
+</div>
+</body>
+</html>

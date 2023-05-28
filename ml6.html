@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>lab</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width">
+<style>
+body {
+    margin:0;
+    padding:0;
+    background-color:#333
+}
+.container {
+    width:90%;
+    margin-left:5%;
+    margin-top:50px;
+    background-color:#555;
+    color:white;
+    padding:10px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h2>
+<pre>
+<code>
+6.IMPLEMENT LINEAR REGRESSION USINGPYTHON.
+
+AIM:
+To Implement linear regression using python.
+
+DESCRIPTION:
+Regression: Regression analysis is one of the most important fields in statistics and machine
+learning.There are many regression methods available. Linear regression is one of them
+What Is Regression?
+Regression analysis is one of the most important fields in statistics and machine
+learning.Thereare many regression methods available. Linear regression is one of
+them.Regression searches for relationships among variables.For example, you can observe
+several employees of some company and try to understand how their salaries depend on the
+features, such as experience, level of education, role, city they work in, and so on.This is a
+regression problem where data related to each employee represent one observation.The
+presumption is that the experience, education, role, and city are the independent features,
+while the salary depends onthem.Generally, in regression analysis, you usually consider some
+phenomenon of interest andTherehave a number of observations. Each observation has two or
+more features. Following the assumption
+that(atleast)oneofthefeaturesdependsontheothers,youtrytoestablisharelationamongthem.you
+need to find a function that maps some features or variables to others sufficiently well. The
+dependent features are called the dependent variables, outputs, or responses.The
+independent features are called the independent variables, inputs, or predictors.
+LinearRegression:
+Linear regression is probably one of the most important and widely used regression
+techniques. It’s among the simplest regression methods. One of its main advantages is the
+ease of interpretingresults.When implementing linear regression ofsome dependent variable
+𝑦on the set of independent variables x= (x1…xrᵣ), where ris the number of predictors, you 
+assume a linear relationship between y andx: y= β0 + β1x1 + ……+ βrxr+ ϵ. This equation is
+the regression equation. β0,𝛽, βrᵣaretheregressioncoefficients, and 𝜀is therandomerror.
+Linear regression calculates the estimators of the regression coefficients or simply the 
+predicted weights, denoted with b1…br. They define the estimated regressionfunction
+f(x) = b0 +b1x1
+
+
+SOURCE CODE:
+import numpy as np 
+import matplotlib.pyplot as plt
+def estimate_coef(x, y):
+ n = np.size(x)
+ m_x = np.mean(x) 
+ m_y = np.mean(y)
+ SS_xy = np.sum(y*x) - n*m_y*m_x
+ SS_xx = np.sum(x*x) - n*m_x*m_x
+ b_1 = SS_xy / SS_xx
+ b_0 = m_y - b_1*m_x 
+ return(b_0, b_1)
+def plot_regression_line(x, y, b):
+ plt.scatter(x, y, color = "m",marker = "o", s = 30)
+ y_pred = b[0] + b[1]*x
+ plt.plot(x, y_pred, color = "g")
+ plt.xlabel('x')
+ plt.ylabel('y')
+ plt.show()
+def main():
+ x = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+ y = np.array([1, 3, 2, 5, 7, 8, 8, 9, 10, 12])
+ b = estimate_coef(x, y)
+ print("Estimated coefficients:\nb_0 = {} \
+ \nb_1 = {}".format(b[0], b[1]))
+ plot_regression_line(x, y, b)
+if __name__ == "__main__":
+main()
+
+
+OUTPUT:
+Estimated coefficients:
+b_0 =1.23636363636
+b_1=1.1696969696969
+</code>
+</pre>
+</h2>
+</div>
+</body>
+</html>

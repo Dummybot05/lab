@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>lab</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width">
+<style>
+body {
+    margin:0;
+    padding:0;
+    background-color:#333
+}
+.container {
+    width:90%;
+    margin-left:5%;
+    margin-top:50px;
+    background-color:#555;
+    color:white;
+    padding:10px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h2>
+<pre>
+<code>
+1. WRITE A RUBY SCRIPT TO CREATE A NEW STRING WHICH IS N COPIES OF A GIVEN STRING WHERE N IS A NONNEGATIVE INTEGER
+
+AIM:
+
+	To write a program to create A New String Which is N Copies of a Given String Where N is a Nonnegative Integer.
+
+PROGRAM:
+
+def multiple string(str, n)
+    return str*n
+end
+print multiple string('a', 1),"\n"
+Print multiple string ('a', 2),"\n"
+Print multiple string ('a', 3),"\n"
+Print multiple string ('a', 4),"\n"
+Print multiple string ('a', 5),"\n"
+
+INPUT & OUTPUT:
+Enter multiple string is ‘a’
+a
+aa
+aaa
+aaaa
+aaaaa
+
+RESULT:
+	Thus the program to create A New String Which is N Copies of a Given String Where N is a Nonnegative Integer.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2. WRITE A RUBY SCRIPT WHICH ACCEPT THE RADIUS OF A CIRCLE FROM THE USER AND COMPUTE THE PARAMETER AND AREA
+
+AIM:
+	
+	To write a program to radius of a circle from the user and compute the parameter and area.
+	
+PROGRAM:
+
+Radius = 5.0
+Perimeter = 0.0
+area = 0.0
+print "Input the radius of the circle: "
+radius = gets.to_f
+Perimeter = 2 * 3.141592653 * radius
+area = 3.141592653 * radius * radius
+Puts "The perimeter is # {perimeter}."
+Puts "The area is # {area}.”
+
+INPUT & OUTPUT:
+
+Input the radius of the circle: 
+The perimeter is 31.41592653.
+The area is 78.539816325.
+
+RESULT:
+	Thus the program to perform Arithmetic, logical and relational Operations is executed and the output is verified.
+
+NOTE: The to_f function in Ruby converts the value of the number as a float.
+The puts (short for "put string") is used to display the results of evaluating Ruby code. Puts adds a newline after executing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3. WRITE A RUBY SCRIPT WHICH ACCEPT THE USER'S FIRST AND LAST NAME AND PRINT THEM IN REVERSE ORDER WITH A SPACE BETWEEN THEM 
+
+AIM:
+
+	To write a program to user's first and last name and print them in reverse order with a space between them .
+
+PROGRAM:
+		
+puts "Input your first name:”
+fname = gets. Chomp
+puts "Input your last name: "
+lname = gets. Chomp
+puts "Hello #{lname} #{fname}"
+
+INPUT & OUTPUT:
+
+Input your first name: narasimha reddy 
+Input your last name: engineering college
+ Hello engineering college narasimha reddy
+
+RESULT:
+	Thus the program to user's first and last name and print them in reverse order with a space between them.
+
+NOTE: gets is your user's input. chomp is the method to remove trailing new line character i.e. '\n' from the the string. whenever "gets" is use to take i/p from user it appends new line character i.e.'\n' in the end of the string.So to remove '\n' from the string 'chomp' is used.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4. WRITE A RUBY SCRIPT TO ACCEPT A FILENAME FROM THE USER PRINT THE EXTENSION OF THAT 
+
+AIM:
+
+	To write a program to accept a filename from the user print the extension of that.
+
+PROGRAM:
+
+file = "/user/system/test.rb"
+# file name
+fbname = File.basename file  
+puts "File name: "+fbname 
+# basename
+bname = File.basename file,".rb"
+puts "Base name: "+bname 
+# file extention
+ffextn = File.extname  file   
+puts "Extention: "+ffextn 
+# path name
+path_name= File.dirname  file 
+puts "Path name: "+path_name
+
+INPUT & OUTPUT:
+
+File name: test.rb
+Base name: test
+Extention: .rb
+Path name: /user/system
+
+RESULT:
+	Thus the programs to accept a filename from the user print the extension of that.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5. WRITE A RUBY SCRIPT TO FIND THE GREATEST OF THREE NUMBERS
+
+
+AIM:
+
+	To write a program to find the greatest of three numbers.
+
+PROGRAM:	
+
+x, y,z = 2,5,4
+if x >= y and x >= z
+    	 puts "x = #{x} is greatest."
+else y >= z and y >= x 
+     	puts "y = #{y} is greatest."
+else 
+    	 puts "z = #{z} is greatest."
+End
+
+INPUT & OUTPUT:
+
+y = 5 is greatest.
+
+RESULT:
+	Thus the program to find the greatest of three numbers.
+</code>
+</pre>
+</h2>
+</div>
+</body>
+</html>

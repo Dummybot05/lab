@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>lab</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width">
+<style>
+body {
+    margin:0;
+    padding:0;
+    background-color:#333
+}
+.container {
+    width:90%;
+    margin-left:5%;
+    margin-top:50px;
+    background-color:#555;
+    color:white;
+    padding:10px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h2>
+<pre>
+<code>
+11. WRITE A TCL SCRIPT TO FIND THE FACTORIAL OF A NUMBER
+
+AIM:
+
+	To write a program to find the factorial of a number.
+
+PROGRAM:
+ 
+set i 1; set fact 1
+set x 5
+while {$i <= $x} {
+   	 set fact [expr $fact * $i]
+   	 incr i
+}
+puts $fact
+INPUT & OUTPUT:
+Factorial 5
+120
+
+RESULT:
+	Thus the program to find the factorial of a number.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12. WRITE A TCL SCRIPT THAT MULTIPLIES THE NUMBERS FROM 1 TO 10
+
+AIM:
+	To write a program to multiplies the numbers from 1 to 10.
+
+PROGRAM:
+set i 1; set res 1
+while {$i <= 10} {
+set res [expr $res * $i]
+incr i
+}
+puts $res
+
+INPUT & OUTPUT:
+$tclsh main.tcl
+3628800
+
+RESULT:
+	Thus the program to multiplies the numbers from 1 to 10.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+13. WRITE A TCL SCRIPT FOR SORTING A LIST USING A COMPARISON FUNCTION
+
+AIM:
+	To write a program to Sorting a list using a comparison function.
+
+PROGRAM:
+proc my compare {arg1 arg2} {
+   if {[regexp {test(\d+)} $arg1 -> n1] && [regexp {test(\d+)} $arg2 -> n2]} 
+{
+       return [expr {$n1 - $n2}]
+   }
+   return [string compare $arg1 $arg2]
+}
+
+set yourlist {test2 test3 test1 test11}
+puts [lsort -command mycompare $yourlist]
+
+INPUT & OUTPUT:
+$tclsh main.tcl
+
+test1 test2 test3 test11
+
+RESULT:
+	Thus the program to Sorting a list using a comparison functions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14. WRITE A TCL SCRIPT TO (I) CREATE A LIST (II) APPEND ELEMENTS TO THE LIST (III) TRAVERSE THE LIST 
+(IV) CONCATENATE THE LIST
+
+AIM:
+	Write a program to (i) create a list (ii) append elements to the list (iii) Traverse the list 
+(iv)  Concatenate the list
+
+PROGRAM:
+
+Create a list
+ set l1 {1 2 3}
+set l2 [list one two three]
+set l3 [split "1.2.3.4”.]
+puts $l1
+puts $l2
+puts $l3
+
+INPUT & OUTPUT:
+1 2 3 
+one two three
+1 2 3 4
+
+(ii) Append elements to the list
+
+	set var orange
+	lappend var  "blue"
+	lappend var "red" 
+	lappend var "green" 
+	puts $var
+
+INPUT & OUTPUT:
+orange blue red green
+
+(iii) Traverse the list
+
+By using while loop
+
+set days [list Monday Tuesday Wednesday Thursday 
+   		 Friday Saturday Sunday]
+set n [llength $days]
+
+set i 0
+
+while {$i < $n} {
+
+    	puts [lindex $days $i]
+   	 incr i
+}
+
+INPUT & OUTPUT:
+$ ./traverse1.tcl
+
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+Sunday
+By using for each
+
+foreach item {1 2 3 4 5 6 7 8 9} 
+{
+ puts $item
+        }
+
+INPUT & OUTPUT:
+
+	$ ./traverse1.tcl
+	1
+	2
+	3
+	4
+	5
+	6
+	7
+	8
+	9
+
+(iv)  Concatenate the list
+% set first {a b c}
+a b c
+% set second {1 2 3}
+1 2 3
+% set first [concat $first $second];
+
+INPUT & OUTPUT:
+a b c 1 2 3
+
+RESULT:
+	Thus the program to (i) create a list (ii ) append elements to the list (iii) Traverse the list (iv)Concatenate the list
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+15. WRITE A TCL SCRIPT TO COMPARING THE FILE MODIFIED TIMES.
+
+AIM:
+	Write a program to comparing the file modified times.
+
+PROGRAM:
+
+proc newer { file1 file2 } {
+	if ![file exists $file2] {
+		return 1
+	} else {
+		# Assume file1 exists
+		expr [file mtime $file1] > [file mtime $file2]
+	}
+}
+
+
+INPUT & OUTPUT:
+
+File1 is having sample_1_*.txt with the time 13:10 hours
+File2 is having sample_1_*.txt with the time 13:17 hours
+sample_1_ sample_2_ 7 Seconds
+
+RESULT:
+	Thus the program to comparing the file modified times.
+</code>
+</pre>
+</h2>
+</div>
+</body>
+</html>
